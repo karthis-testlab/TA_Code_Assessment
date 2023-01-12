@@ -12,7 +12,9 @@ public class ChromeOptionsExamples {
 
 	public static void main(String[] args) {
 		
-		 ChromeDriver driver = new ChromeDriver(setMobileEmulation("iPhone 12 Pro"));
+		String userAgent = "Mozilla/5.0 (Linux; Android 4.2.1; en-us; Nexus 5 Build/JOP40D) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.166 Mobile Safari/535.19";
+		
+		 ChromeDriver driver = new ChromeDriver(setCustomMobileEmulation(360, 640, 3.0, userAgent));
 		 driver.get("https://www.saucedemo.com/");
 		
 		/* ChromeDriver driver = new ChromeDriver(setDownloadDirectory("/Users/karthistestlab/Documents/Test Architect/eclipse-workspace/TA_Code_AssessMent/downloads"));
@@ -66,7 +68,18 @@ public class ChromeOptionsExamples {
 		return options;
 	}
 	
-	
+	public static ChromeOptions setCustomMobileEmulation(int width, int height, double pixelRatio, String userAgent) {
+		ChromeOptions options = new ChromeOptions();
+		Map<String, Object> deviceMetrics = new HashMap<String, Object>();
+		deviceMetrics.put("width", width);
+		deviceMetrics.put("height", height);
+		deviceMetrics.put("pixelRatio", pixelRatio);
+		Map<String, Object> mobileEmulation = new HashMap<String, Object>();
+		mobileEmulation.put("deviceMetrics", deviceMetrics);		
+		mobileEmulation.put("userAgent", userAgent);
+		options.setExperimentalOption("mobileEmulation", mobileEmulation);
+		return options;
+	}
 	
 
 }
