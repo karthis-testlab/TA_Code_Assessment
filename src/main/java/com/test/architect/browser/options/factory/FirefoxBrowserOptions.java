@@ -16,4 +16,14 @@ public class FirefoxBrowserOptions implements BrowserConfig {
 		return firefox.addArguments(arg);
 	}
 
+	@Override
+	public MutableCapabilities headless(boolean arg) {		
+		return firefox.setHeadless(arg);
+	}
+
+	@Override
+	public MutableCapabilities disableNotifications(String arg) {		
+		return firefox.addArguments(arg);
+	}
+
 }

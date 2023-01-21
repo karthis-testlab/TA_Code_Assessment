@@ -16,4 +16,14 @@ public class EdgeBrowserOptions implements BrowserConfig {
 		return edge.addArguments(arg);
 	}
 
+	@Override
+	public MutableCapabilities headless(boolean arg) {		
+		return edge.setHeadless(arg);
+	}
+
+	@Override
+	public MutableCapabilities disableNotifications(String arg) {
+		return edge.addArguments(arg);
+	}
+
 }

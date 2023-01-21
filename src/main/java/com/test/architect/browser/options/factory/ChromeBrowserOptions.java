@@ -16,4 +16,14 @@ public class ChromeBrowserOptions implements BrowserConfig {
 		return chrome.addArguments(arg);
 	}
 
+	@Override
+	public MutableCapabilities headless(boolean arg) {		
+		return chrome.setHeadless(arg);
+	}
+
+	@Override
+	public MutableCapabilities disableNotifications(String arg) {
+		return chrome.addArguments(arg);
+	}
+
 }
