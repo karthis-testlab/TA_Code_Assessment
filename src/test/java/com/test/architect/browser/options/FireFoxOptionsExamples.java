@@ -19,8 +19,9 @@ public class FireFoxOptionsExamples {
 		/* FirefoxDriver driver = new FirefoxDriver(headless("-headless"));
 		 driver.get("https://www.saucedemo.com/"); */
 		
-		/* FirefoxDriver driver = new FirefoxDriver(webNotificationDisabled());
-		driver.get("https://www.carwale.com/"); */
+		FirefoxOptions options = new FirefoxOptions();
+		FirefoxDriver driver = new FirefoxDriver(options.addArguments(""));
+		driver.get("https://kitchen.applitools.com/ingredients/notification"); 
 		
 		/* FirefoxDriver driver = new FirefoxDriver(setDownloadDirectory("/Users/karthistestlab/Documents/Test Architect/eclipse-workspace/TA_Code_AssessMent/downloads"));
 		driver.manage().window().maximize();
@@ -28,14 +29,14 @@ public class FireFoxOptionsExamples {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		driver.findElement(By.linkText("Screenshot.png")).click(); */
 		
-		FirefoxProfile profile = new FirefoxProfile();
+		/*FirefoxProfile profile = new FirefoxProfile();
 		profile.setPreference("general.useragent.override", userAgent);
 		FirefoxOptions options = new FirefoxOptions();
 		options.setProfile(profile);
 		Dimension dimension = new Dimension(360, 640);
 		FirefoxDriver driver = new FirefoxDriver(options);
 		driver.manage().window().setSize(dimension);
-		driver.get("https://www.saucedemo.com/");
+		driver.get("https://www.saucedemo.com/");*/
 		
 	}
 	

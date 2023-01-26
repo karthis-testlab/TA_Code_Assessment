@@ -1,4 +1,4 @@
-package com.test.architect.browser.options.factory;
+package com.test.architect.assessment.browser.options.factory;
 
 import java.util.HashMap;
 import java.util.Map;

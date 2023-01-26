@@ -1,4 +1,4 @@
-package com.test.architect.browser.options.factory;
+package com.test.architect.assessment.browser.options.factory;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;

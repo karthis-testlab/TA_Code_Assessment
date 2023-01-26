@@ -4,9 +4,9 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxOptions;
 
-import com.test.architect.browser.options.factory.BrowserConfig;
-import com.test.architect.browser.options.factory.Options;
-import com.test.architect.browser.options.factory.OptionsFactory;
+import com.test.architect.assessment.browser.options.factory.BrowserConfig;
+import com.test.architect.assessment.browser.options.factory.Options;
+import com.test.architect.assessment.browser.options.factory.OptionsFactory;
 
 public class DriverFactory {
 

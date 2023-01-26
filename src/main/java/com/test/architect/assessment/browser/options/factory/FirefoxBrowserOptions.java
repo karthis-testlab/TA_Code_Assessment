@@ -1,4 +1,4 @@
-package com.test.architect.browser.options.factory;
+package com.test.architect.assessment.browser.options.factory;
 
 import org.openqa.selenium.MutableCapabilities;
 import org.openqa.selenium.firefox.FirefoxOptions;
@@ -23,8 +23,14 @@ public class FirefoxBrowserOptions implements BrowserConfig {
 		return firefox.addArguments(arg);
 	}
 
+	/*
+	 * maximize() method is not applicable for the firefox driver options
+	 * which means the string arguments "start-maximized" was not allowed in
+	 * Firefox options. But it does it affect any follow.
+	 * 
+	 */
 	public MutableCapabilities maximize() {
-		return firefox.addArguments("start-maximized");
+		return firefox.addArguments("");
 	}
 	
 	public MutableCapabilities setDownloadDirectory(String folderPath) {		
