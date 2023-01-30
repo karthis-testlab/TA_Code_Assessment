@@ -66,5 +66,19 @@ public interface BrowserConfig {
 	 * @return Should return the MutableCapabilities object which parent class for all browser capabilities (options)
 	 */
 	MutableCapabilities setDownloadDirectory(String folderPath);
+	
+	/**
+	 * 
+	 * @param deviceName
+	 * @return
+	 */
+	MutableCapabilities setMobileEmulation(String deviceName);
+		
+	/**
+	 * 
+	 * @param arg
+	 * @return
+	 */
+	MutableCapabilities openPrivateWindow(String arg);
 
 }

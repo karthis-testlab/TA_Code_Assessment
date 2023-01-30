@@ -35,5 +35,15 @@ public class ChromeBrowserOptions implements BrowserConfig {
 		prefs.put("download.default_directory", folderPath);
 		return chrome.setExperimentalOption("prefs", prefs);
 	}
+	
+	public MutableCapabilities setMobileEmulation(String deviceName) {
+		Map<String, String> mobileEmulation = new HashMap<String, String>();
+		mobileEmulation.put("deviceName", deviceName);
+		return chrome.setExperimentalOption("mobileEmulation", mobileEmulation);
+	}
+
+	public MutableCapabilities openPrivateWindow(String arg) {
+		return null;
+	}
 
 }

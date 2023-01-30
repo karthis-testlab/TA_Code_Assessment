@@ -1,6 +1,8 @@
 package com.test.architect.browser.options;
 
 import java.time.Duration;
+import java.util.HashMap;
+import java.util.Map;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
@@ -20,7 +22,7 @@ public class FireFoxOptionsExamples {
 		 driver.get("https://www.saucedemo.com/"); */
 		
 		FirefoxOptions options = new FirefoxOptions();
-		FirefoxDriver driver = new FirefoxDriver(options.addArguments(""));
+		FirefoxDriver driver = new FirefoxDriver();
 		driver.get("https://kitchen.applitools.com/ingredients/notification"); 
 		
 		/* FirefoxDriver driver = new FirefoxDriver(setDownloadDirectory("/Users/karthistestlab/Documents/Test Architect/eclipse-workspace/TA_Code_AssessMent/downloads"));

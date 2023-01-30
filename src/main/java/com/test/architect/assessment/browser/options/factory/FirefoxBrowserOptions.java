@@ -36,5 +36,19 @@ public class FirefoxBrowserOptions implements BrowserConfig {
 	public MutableCapabilities setDownloadDirectory(String folderPath) {		
 		return firefox.addPreference("download.default_directory", folderPath);
 	}
+	
+	/*
+	 * In Firefox options we don't have setExprementalOption() method, so we don't able
+	 * to add the already existing mobile device library in the Firefox options leve
+	 * instead we'll create the customized mobile emulate options
+	 */
+	public MutableCapabilities setMobileEmulation(String deviceName) {
+		return null;
+	}
+
+	public MutableCapabilities openPrivateWindow(String arg) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 
 }

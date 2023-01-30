@@ -36,4 +36,14 @@ public class EdgeBrowserOptions implements BrowserConfig {
 		return edge.setExperimentalOption("prefs", prefs);
 	}
 
+	public MutableCapabilities setMobileEmulation(String deviceName) {
+		Map<String, String> mobileEmulation = new HashMap<String, String>();
+		mobileEmulation.put("deviceName", deviceName);
+		return edge.setExperimentalOption("mobileEmulation", mobileEmulation);
+	}
+	
+	public MutableCapabilities openPrivateWindow(String arg) {		
+		return null;
+	}
+
 }
