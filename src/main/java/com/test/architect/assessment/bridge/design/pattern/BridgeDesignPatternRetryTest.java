@@ -1,25 +1,18 @@
 package com.test.architect.assessment.bridge.design.pattern;
 
-import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-public class BridgeDesignPatternTest {	
+import com.test.architect.utils.HandleProperties;
+
+public class BridgeDesignPatternRetryTest {	
 	
-	String aut = "http://leaftaps.com/opentaps";
+	String aut = "http://leaftaps.com/opentaps";	
 	
-	@DataProvider
-	public String[][] engineData(){
-		return new String[][] {
-			{"selenium", "chrome"},
-			{"playwright", "chrome"}
-		};
-	}
-	
-	@Test(dataProvider = "engineData")
-	public void seleniumPlaywrightBridgeTest(String engineName, String browserName) {
+	@Test(retryAnalyzer = RetryOnSeleniumEngine.class)
+	public void seleniumRetryBridgeTest() {
 		
-		EngineRawMetrial engine = EngineFactory.engineToRun(engineName);
-		engine.launch(browserName, aut);
+		EngineRawMetrial engine = EngineFactory.engineToRun(HandleProperties.readConfigProperties("Engine"));
+		engine.launch(HandleProperties.readConfigProperties("Browser"), aut);
 		
 		engine.type("//input[@id='username']", "demosalesmanager");
 		engine.type("//input[@id='password']", "crmsfa");

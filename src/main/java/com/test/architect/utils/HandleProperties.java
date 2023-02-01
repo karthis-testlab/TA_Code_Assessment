@@ -43,12 +43,4 @@ public class HandleProperties {
 		}
 	}
 
-	public static void main(String[] args) {
-		System.out.println(readConfigProperties("Engine"));
-		System.out.println(readConfigProperties("Browser"));
-		updateConfigProperties("Engine", "Selenium");
-		System.out.println(readConfigProperties("Engine"));
-		System.out.println(readConfigProperties("Browser"));
-	}
-
 }
